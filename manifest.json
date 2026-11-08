@@ -1,0 +1,17 @@
+{
+  "name": "Garage",
+  "short_name": "Garage",
+  "description": "Carnet d'entretien automobile personnel",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2f6f5",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
