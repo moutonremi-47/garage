@@ -1,17 +1,14 @@
-# Garage 1.2
+# Garage 1.3
 
-Mise à jour compatible avec les données de Garage V1.
+PWA personnelle de suivi d'entretien multi-véhicules.
 
-## Nouveautés
-- Clic sur un véhicule : fiche dédiée avec À venir, Interventions et Factures.
-- Ajout de PDF et photos aux interventions.
-- Factures incluses dans la sauvegarde JSON.
-- Proposition de sauvegarde via le partage Android après chaque modification.
-- Suppression complète de l'option « Effacer toutes les données ».
-- Cache PWA 1.2.0.
-- Connexion OAuth Google Drive avec scope `drive.appdata`.
-- Synchronisation automatique 2,5 secondes après chaque modification.
-- Statut de synchronisation visible et restauration depuis Drive.
+## Nouveautés 1.3
+- Connexion Google Drive par redirection (fiable en PWA installée).
+- Sauvegarde automatique dans l'appDataFolder privé (scope drive.appdata), 2,5 s après chaque modification.
+- Envoi sans limite de taille (factures/photos).
+- Sur un nouvel appareil, une sauvegarde Drive existante est récupérée, jamais écrasée.
+- Modifications conservées localement et renvoyées si la session Google expire.
+- Le service worker ne met plus en cache les échanges Google.
 
-## Mise à jour
-Remplacer les fichiers du dépôt GitHub par ceux de cette archive. Les données IndexedDB existantes sont conservées.
+## Prérequis Google Cloud
+URI de redirection autorisé du client OAuth : https://moutonremi-47.github.io/garage/
