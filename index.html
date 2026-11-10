@@ -1,27 +1,9 @@
-<!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0f766e"><title>Garage</title>
-<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header><div><h1>Garage</h1><p id="syncLabel">Données locales</p></div><button id="installBtn" class="ghost" hidden>Installer</button></header>
-<main>
-<section id="dashboard" class="view active">
-  <div class="stats"><article><b id="vehicleCount">0</b><span>véhicules</span></article><article class="warn"><b id="dueSoonCount">0</b><span>à prévoir</span></article><article class="danger"><b id="overdueCount">0</b><span>en retard</span></article></div>
-  <div class="toolbar"><h2>Mes véhicules</h2><button data-action="vehicle">+ Véhicule</button></div>
-  <div id="vehicleCards" class="cards"></div>
-  <div class="toolbar"><h2>Échéances prioritaires</h2></div><div id="priorityList" class="list"></div>
-</section>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0f766e"><title>Garage</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"></head><body><header><button id="backBtn" class="icon" hidden>‹</button><div><h1 id="pageTitle">Garage</h1><p id="syncLabel">Données locales · sauvegarde Drive manuelle</p></div><button id="installBtn" class="ghost" hidden>Installer</button></header><main>
+<section id="dashboard" class="view active"><div class="stats"><article><b id="vehicleCount">0</b><span>véhicules</span></article><article class="warn"><b id="dueSoonCount">0</b><span>à prévoir</span></article><article class="danger"><b id="overdueCount">0</b><span>en retard</span></article></div><div class="toolbar"><h2>Mes véhicules</h2><button data-action="vehicle">+ Véhicule</button></div><div id="vehicleCards" class="cards"></div><div class="toolbar"><h2>Échéances prioritaires</h2></div><div id="priorityList" class="list"></div></section>
+<section id="vehicleDetail" class="view"><div id="vehicleHero"></div><div class="tabs"><button data-tab="future" class="active">À venir</button><button data-tab="past">Interventions</button><button data-tab="docs">Factures</button></div><div id="vehicleDetailBody"></div></section>
 <section id="vehicles" class="view"><div class="toolbar"><h2>Véhicules</h2><button data-action="vehicle">+ Ajouter</button></div><div id="vehicleList" class="list"></div></section>
 <section id="schedules" class="view"><div class="toolbar"><h2>Échéances</h2><button data-action="schedule">+ Ajouter</button></div><div class="filters"><button class="chip active" data-filter="all">Toutes</button><button class="chip" data-filter="overdue">En retard</button><button class="chip" data-filter="soon">À prévoir</button><button class="chip" data-filter="ok">OK</button></div><div id="scheduleList" class="list"></div></section>
 <section id="history" class="view"><div class="toolbar"><h2>Historique</h2><button data-action="maintenance">+ Intervention</button></div><div id="historyList" class="list"></div></section>
-<section id="more" class="view"><h2>Données et réglages</h2><div class="settings"><button id="exportBtn">Exporter la sauvegarde JSON</button><label class="button">Importer une sauvegarde<input id="importInput" type="file" accept="application/json" hidden></label><button id="exportCsvBtn">Exporter les entretiens CSV</button><button id="demoBtn" class="ghost">Charger un exemple</button><button id="resetBtn" class="dangerBtn">Effacer toutes les données</button><p class="muted">La V1 stocke les données dans ce navigateur. Google Drive et Synology seront ajoutés dans le lot synchronisation.</p><p id="backupInfo" class="muted"></p></div></section>
-</main>
-<button id="fab" aria-label="Ajouter">+</button>
-<nav><button data-view="dashboard" class="active">Accueil</button><button data-view="vehicles">Véhicules</button><button data-view="schedules">Échéances</button><button data-view="history">Historique</button><button data-view="more">Plus</button></nav>
-<dialog id="modal"><form id="modalForm" method="dialog"><div class="dialogHead"><h2 id="modalTitle"></h2><button value="cancel" class="icon" formnovalidate>✕</button></div><div id="modalBody"></div><div class="dialogActions"><button value="cancel" class="ghost" formnovalidate>Annuler</button><button id="saveBtn" value="default">Enregistrer</button></div></form></dialog>
-<div id="toast" role="status" aria-live="polite"></div>
-<script src="app.js"></script>
-</body></html>
+<section id="more" class="view"><h2>Données et sauvegardes</h2><div class="settings"><button id="shareBackupBtn">☁️ Sauvegarder vers Drive / Proton / Synology</button><button id="exportBtn" class="ghost">Télécharger la sauvegarde JSON</button><label class="button ghost">Restaurer une sauvegarde<input id="importInput" type="file" accept="application/json" hidden></label><button id="exportCsvBtn" class="ghost">Exporter les entretiens CSV</button><p class="muted">Après chaque modification, Garage propose une sauvegarde vers l’application de stockage de ton choix. La synchronisation Google Drive totalement automatique nécessitera ensuite l’autorisation OAuth Google.</p><p id="backupInfo" class="muted"></p></div></section>
+</main><button id="fab" aria-label="Ajouter">+</button><nav><button data-view="dashboard" class="active">Accueil</button><button data-view="vehicles">Véhicules</button><button data-view="schedules">Échéances</button><button data-view="history">Historique</button><button data-view="more">Plus</button></nav>
+<dialog id="modal"><form id="modalForm" method="dialog"><div class="dialogHead"><h2 id="modalTitle"></h2><button value="cancel" class="icon" formnovalidate>✕</button></div><div id="modalBody"></div><div class="dialogActions"><button value="cancel" class="ghost" formnovalidate>Annuler</button><button id="saveBtn" value="default">Enregistrer</button></div></form></dialog><div id="toast" role="status" aria-live="polite"></div><script src="app.js"></script></body></html>
