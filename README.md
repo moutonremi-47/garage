@@ -1,6 +1,10 @@
-# Garage 1.5
+# Garage 1.6
 
 PWA personnelle de suivi d'entretien multi-véhicules.
+
+## Nouveautés 1.6
+- Échéances modifiables : toucher une échéance pour la corriger ou la supprimer.
+- Un formulaire invalide reste ouvert au lieu de se fermer.
 
 ## Nouveautés 1.5
 - Synchronisation multi-appareils : fusion des données (PC, téléphone…) au lieu d'écraser.
