@@ -1,6 +1,9 @@
-# Garage 1.3
+# Garage 1.4
 
 PWA personnelle de suivi d'entretien multi-véhicules.
+
+## Nouveautés 1.4
+- Historique modifiable : toucher une intervention pour la corriger, ajouter ou retirer une facture, ou la supprimer.
 
 ## Nouveautés 1.3
 - Connexion Google Drive par redirection (fiable en PWA installée).
