@@ -1,6 +1,13 @@
-# Garage 1.4
+# Garage 1.5
 
 PWA personnelle de suivi d'entretien multi-véhicules.
+
+## Nouveautés 1.5
+- Synchronisation multi-appareils : fusion des données (PC, téléphone…) au lieu d'écraser.
+- Relecture de Drive à l'ouverture, au retour sur l'application et toutes les 2 minutes.
+- Les suppressions sont propagées aux autres appareils.
+- Reconnexion Google automatique quand la session a expiré.
+- Numéro de version affiché dans Plus.
 
 ## Nouveautés 1.4
 - Historique modifiable : toucher une intervention pour la corriger, ajouter ou retirer une facture, ou la supprimer.
